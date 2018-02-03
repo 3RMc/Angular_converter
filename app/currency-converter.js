@@ -45,4 +45,24 @@ function CurConvCtrl($scope, CurrencyService) {
     this.updateRates = () => {
         this.getRatesByCurrency(this.currencyIn.code);
     }
+
+    /* поменять валюты местами */
+    this.reverseCurrency = () => {
+        var curIn = this.currencyIn,
+            curOut = this.currencyOut;
+        this.setCurrencyIn(curOut);
+        this.setCurrencyOut(curIn);
+        this.updateRates();
+    }
+
+    /* получить коэффициенты валют */
+    this.getRatesByCurrency = (currency) => {
+        CurrencyService.getRatesByCurrency(currency).then((res) => {
+            this.currencyRates = res.data.rates;
+        this.calculateCurrencyOut();
+    }, (err) => {
+            console.log(err);
+        });
+    }
+
 }
