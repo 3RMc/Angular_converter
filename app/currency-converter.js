@@ -40,4 +40,9 @@ function CurConvCtrl($scope, CurrencyService) {
             console.log(err);
         });
     }
+
+    /* обновление коэффициентов для выбранной валюты */
+    this.updateRates = () => {
+        this.getRatesByCurrency(this.currencyIn.code);
+    }
 }
