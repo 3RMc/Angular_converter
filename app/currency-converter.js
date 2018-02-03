@@ -16,4 +16,8 @@ function CurConvCtrl($scope, CurrencyService) {
     this.currencyRates = [];   // коэффициенты валют
     this.sumIn = 1;            // сумма на входе
     this.sumOut = 0;           // сумма на выходе
+
+    this.setCurrencyIn = (currencyItem) => {
+        this.currencyIn = currencyItem;
+    }
 }
