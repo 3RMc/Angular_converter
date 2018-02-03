@@ -26,7 +26,11 @@
         <div class="col-xs-12 col-sm-4">
             <div class="form-group">
                 <label>Нужная валюта</label>
-                <select class="form-control" name="currencyOutSelect">
+                <select class="form-control" name="currencyOutSelect"
+                                             ng-options="option.name + ' (' + option.code + ' )' for option in curConvCtrl.currencies"
+                                             ng-model="curConvCtrl.currencyOut"
+                                             ng-change="curConvCtrl.updateRates"
+                >
                 </select>
             </div>
         </div>
