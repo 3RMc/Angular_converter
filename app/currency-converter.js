@@ -20,4 +20,8 @@ function CurConvCtrl($scope, CurrencyService) {
     this.setCurrencyIn = (currencyItem) => {
         this.currencyIn = currencyItem;
     }
+
+    this.serCurrencyOut = (currencyItem) => {
+        this.currencyOut = currencyItem;
+    }
 }
