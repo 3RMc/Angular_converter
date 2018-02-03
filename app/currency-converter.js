@@ -24,4 +24,8 @@ function CurConvCtrl($scope, CurrencyService) {
     this.serCurrencyOut = (currencyItem) => {
         this.currencyOut = currencyItem;
     }
+
+    this.setSumOut = (sum) => {
+        this.sumOut = sum;
+    }
 }
