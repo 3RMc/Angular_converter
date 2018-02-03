@@ -21,7 +21,7 @@ function CurConvCtrl($scope, CurrencyService) {
         this.currencyIn = currencyItem;
     }
 
-    this.serCurrencyOut = (currencyItem) => {
+    this.setCurrencyOut = (currencyItem) => {
         this.currencyOut = currencyItem;
     }
 
@@ -34,7 +34,7 @@ function CurConvCtrl($scope, CurrencyService) {
         CurrencyService.getCurrencies().then((res) => {
             this.currencies = res;
             this.setCurrencyIn(this.currencies[0]);
-            this.serCurrencyOut(this.currencies[1]);
+            this.setCurrencyOut(this.currencies[1]);
             this.updateRates();
         }, (err) => {
             console.log(err);
