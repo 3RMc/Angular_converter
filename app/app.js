@@ -1,0 +1,1 @@
+var curConvApp = angular.module('currencyConverter', []);
