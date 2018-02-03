@@ -65,4 +65,12 @@ function CurConvCtrl($scope, CurrencyService) {
         });
     }
 
+    /* расчитать валюту */
+    this.calculateCurrencyOut = () => {
+        var rate = this.currencyRates[this.currencyOut.code] || 1,
+            sum = this.sumIn * rate;
+        this.setSumOut(sum.toFixed(3));
+    }
+
+    this.getCurrencies();
 }
