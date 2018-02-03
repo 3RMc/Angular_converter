@@ -1,0 +1,34 @@
+<form>
+    <div class="row">
+        <div class="col-xs-12 col-sm-3">
+            <div class="form-group">
+                <label>Сумма</label>
+                <input class="form-control"type="text"/>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label>Имеющаяся валюта</label>
+                <select class="form-control" name="currencyInSelect">
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-1 text-center">
+            <label style="visibility:hidden;">Reverse</label>
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-resize-horizontal" title="Поменять валюты местами"></span>
+            </button>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+                <label>Нужная валюта</label>
+                <select class="form-control" name="currencyOutSelect">
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="currency-converter-result bg-success text-center">
+        <h4>Результат конвертации</h4>
+        <h4></h4>
+    </div>
+</form>
