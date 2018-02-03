@@ -18,4 +18,26 @@ angular.module('currencyConverter').service('CurrencyService', function ($q, $ht
                 reject({err:'Курсы валют не найдены'})
         });
     }
-})
+
+    // получить коэффициенты валют из API
+    this.getRatesByCurrency = (currency) => {
+        return $q((resolve, reject) => {
+            if (currency) {
+                $http.get(ratesUrl, {
+                    method: 'GET',
+                    params: {
+                        base: currency
+                    }
+                })
+                .then((res) => {
+                    resolve(res);
+                }, (err) => {
+                    reject(err);
+                });
+            }
+            else {
+                reject({err: "Не удается получить доступ к API"})
+            }
+        });
+    }
+});
