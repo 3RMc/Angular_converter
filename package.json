@@ -1,0 +1,24 @@
+{
+  "name": "angular_email",
+  "version": "1.0.0",
+  "description": "Interface for mail servise on Angular",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3RMc/Angular_email.git"
+  },
+  "author": "3RMc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3RMc/Angular_email/issues"
+  },
+  "homepage": "https://github.com/3RMc/Angular_email#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-stylus": "^2.7.0"
+  }
+}
