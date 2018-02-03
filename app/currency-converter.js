@@ -28,4 +28,16 @@ function CurConvCtrl($scope, CurrencyService) {
     this.setSumOut = (sum) => {
         this.sumOut = sum;
     }
+
+    // получение списка валют
+    this.getCurrencies = () => {
+        CurrencyService.getCurrencies().then((res) => {
+            this.currencies = res;
+            this.setCurrencyIn(this.currencies[0]);
+            this.serCurrencyOut(this.currencies[1]);
+            this.updateRates();
+        }, (err) => {
+            console.log(err);
+        });
+    }
 }
